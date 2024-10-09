@@ -1,13 +1,12 @@
-// Simple scroll animation for sections to make them fade-in when they enter the viewport
+// Simple scroll animation for sections
 window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('.fade-in');
     const windowHeight = window.innerHeight;
 
     sections.forEach(section => {
         const sectionTop = section.getBoundingClientRect().top;
         if (sectionTop < windowHeight - 100) {
-            section.style.opacity = 1;
-            section.style.transform = 'translateY(0)';
+            section.classList.remove('fade-in');
         }
     });
 });
