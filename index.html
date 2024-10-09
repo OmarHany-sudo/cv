@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Omar Hany Shalaby – Cybersecurity Specialist">
-    <title>Omar Hany Shalaby - Cybersecurity Specialist</title>
+    <title>Omar Hany Shalaby - Cybersecurity Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
     <script defer src="script.js"></script>
 </head>
 <body>
@@ -24,14 +25,14 @@
         </nav>
         <div class="hero">
             <div class="container">
-                <h2>Cybersecurity Specialist</h2>
-                <p>Protecting systems and data from cyber threats.</p>
-                <a href="#contact" class="btn">Get In Touch</a>
+                <h2 data-aos="fade-up">Cybersecurity Specialist</h2>
+                <p data-aos="fade-up" data-aos-delay="200">Protecting systems and data from cyber threats.</p>
+                <a href="#contact" class="btn" data-aos="fade-up" data-aos-delay="400">Get In Touch</a>
             </div>
         </div>
     </header>
 
-    <section id="about">
+    <section id="about" data-aos="fade-up">
         <div class="container">
             <h2>About Me</h2>
             <p>I am a cybersecurity specialist with a passion for safeguarding information and systems.</p>
@@ -44,19 +45,19 @@
         </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" data-aos="fade-up">
         <div class="container">
             <h2>Key Projects</h2>
             <div class="project-list">
-                <div class="project">
+                <div class="project" data-aos="fade-up" data-aos-delay="100">
                     <h3>Network Security Overhaul</h3>
                     <p>Revamped security protocols for a local business.</p>
                 </div>
-                <div class="project">
+                <div class="project" data-aos="fade-up" data-aos-delay="200">
                     <h3>Custom Pentesting Tools</h3>
                     <p>Developed tools for vulnerability analysis and testing.</p>
                 </div>
-                <div class="project">
+                <div class="project" data-aos="fade-up" data-aos-delay="300">
                     <h3>Security Awareness Training</h3>
                     <p>Conducted training sessions for staff on cybersecurity best practices.</p>
                 </div>
@@ -64,19 +65,18 @@
         </div>
     </section>
 
-    <section id="certifications">
+    <section id="certifications" data-aos="fade-up">
         <div class="container">
             <h2>Certifications</h2>
             <ul>
                 <li>Certified Ethical Hacker (CEH)</li>
                 <li>CompTIA Security+</li>
                 <li>Cisco Certified Network Associate (CCNA)</li>
-                <!-- يمكنك إضافة المزيد من الشهادات هنا -->
             </ul>
         </div>
     </section>
 
-    <section id="social-media">
+    <section id="social-media" data-aos="fade-up">
         <div class="container">
             <h2>Connect with Me</h2>
             <div class="social-links">
@@ -87,7 +87,7 @@
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
         <div class="container">
             <h2>Contact Me</h2>
             <form action="submit_form.php" method="POST">
@@ -104,5 +104,8 @@
             <p>© 2024 Omar Hany Shalaby. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- AOS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
 </body>
 </html>
