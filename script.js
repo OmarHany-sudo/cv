@@ -1,12 +1,21 @@
-// Simple scroll animation for sections
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('.fade-in');
-    const windowHeight = window.innerHeight;
+// Scroll Animation
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section');
+    const options = {
+        root: null,
+        threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
 
     sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < windowHeight - 100) {
-            section.classList.remove('fade-in');
-        }
+        observer.observe(section);
     });
 });
