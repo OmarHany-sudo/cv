@@ -3,115 +3,105 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
     background-color: #121212;
     color: #f1f1f1;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
-/* Animation for text fade-in */
+/* Animation for fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 0.8s forwards;
+}
+
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
     100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* Animation for button hover */
-@keyframes buttonGlow {
-    0% {
-        box-shadow: 0 0 5px #00ff00;
-    }
-    100% {
-        box-shadow: 0 0 20px #00ff00;
-    }
-}
-
 /* Header Styling */
 header {
     background-color: #1a1a1a;
-    padding: 20px;
+    padding: 50px 20px;
     text-align: center;
-    border-bottom: 2px solid #00ff00;
-    animation: fadeIn 1s ease-in-out;
+    position: relative;
 }
 
 header h1 {
     color: #00ff00;
     font-size: 3rem;
-    animation: fadeIn 1.5s ease-in-out;
 }
 
 header p {
     color: #00ff99;
-    animation: fadeIn 2s ease-in-out;
+    margin: 10px 0;
 }
 
-/* Home Section Styling with Animations */
-#home {
-    text-align: center;
-    background-color: #1a1a1a;
-    animation: fadeIn 2s ease-in-out;
-}
-
-#home h2 {
-    color: #00ff00;
-    animation: fadeIn 2s ease-in-out;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 20px;
+header .btn {
     padding: 10px 20px;
-    color: #fff;
     background-color: #00ff00;
     border: none;
     cursor: pointer;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    animation: fadeIn 2.5s ease-in-out;
 }
 
-.btn:hover {
-    animation: buttonGlow 1.5s infinite alternate;
+header .btn:hover {
+    background-color: #00cc00;
 }
 
-/* About Me Section with Fade-In and Slide-In Animation */
+/* Main Section */
+#home {
+    text-align: center;
+    background-color: #1a1a1a;
+    padding: 50px 20px;
+}
+
+#home h2 {
+    color: #00ff00;
+    font-size: 2.5rem;
+}
+
+#home p {
+    color: #ccc;
+}
+
+/* About Me Section */
 #about {
     padding: 50px 20px;
-    animation: fadeIn 3s ease-in-out;
+    background-color: #1e1e1e;
+}
+
+#about h2 {
+    color: #00ff00;
 }
 
 #about p, #about ul {
-    animation: fadeIn 3.5s ease-in-out;
+    color: #f1f1f1;
 }
 
 #about ul li {
-    padding: 10px;
-    background: #222;
     margin: 10px 0;
+    background: #222;
+    padding: 10px;
     border-left: 4px solid #00ff00;
-    animation: fadeIn 4s ease-in-out;
 }
 
-/* Projects Section with Fade-In Animation */
+/* Projects Section */
 #projects {
     padding: 50px 20px;
-    animation: fadeIn 3s ease-in-out;
 }
 
 .project-list {
     display: flex;
     flex-direction: column;
-    animation: fadeIn 3.5s ease-in-out;
 }
 
 .project {
@@ -119,13 +109,12 @@ header p {
     padding: 20px;
     margin-bottom: 20px;
     border: 2px solid #00ff00;
-    animation: fadeIn 4s ease-in-out;
 }
 
-/* Contact Form Styling with Animations */
+/* Contact Section */
 #contact {
     padding: 50px 20px;
-    animation: fadeIn 3s ease-in-out;
+    background-color: #1e1e1e;
 }
 
 #contact form input, #contact form textarea {
@@ -134,14 +123,6 @@ header p {
     border: none;
     background: #222;
     color: #fff;
-    border-left: 4px solid #00ff00;
-    transition: all 0.3s ease;
-    animation: fadeIn 3.5s ease-in-out;
-}
-
-#contact form input:focus, #contact form textarea:focus {
-    outline: none;
-    background-color: #333;
 }
 
 #contact button {
@@ -150,11 +131,10 @@ header p {
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    animation: fadeIn 4s ease-in-out;
 }
 
 #contact button:hover {
-    animation: buttonGlow 1.5s infinite alternate;
+    background-color: #00cc00;
 }
 
 /* Footer */
@@ -163,5 +143,4 @@ footer {
     text-align: center;
     padding: 20px;
     color: #00ff00;
-    animation: fadeIn 4.5s ease-in-out;
 }
