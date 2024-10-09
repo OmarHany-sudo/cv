@@ -57,7 +57,7 @@ nav ul li a:hover {
 
 .hero {
     background: url('your-hero-image.jpg') no-repeat center center/cover;
-    height: 300px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -188,6 +188,16 @@ nav ul li a:hover {
 footer {
     background-color: #1a1a1a;
     text-align: center;
-    padding: 20px;
-    color: #00ff00;
+    padding: 20px 0;
+}
+
+/* AOS Animation Styles */
+[data-aos] {
+    opacity: 0; /* Start hidden */
+    transition-property: opacity, transform;
+    transition-duration: 0.6s;
+}
+
+[data-aos].aos-animate {
+    opacity: 1; /* Fade in */
 }
