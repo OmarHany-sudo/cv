@@ -1,203 +1,135 @@
-/* General Styles */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
 body {
+    font-family: 'Arial', sans-serif;
     background-color: #121212;
-    color: #f1f1f1;
+    color: #fff;
+    line-height: 1.6;
+    padding: 0 20px;
 }
 
-/* Header Styles */
-header {
-    position: relative;
-    background-color: #1a1a1a;
-    text-align: center;
-    padding: 60px 0;
-}
-
-nav {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding: 20px 0;
-}
-
-nav .container {
+/* الصفحة الرئيسية */
+#home {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav h1 {
-    color: #00ff00;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #00ff99;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #00cc00;
-}
-
-.hero {
-    background: url('your-hero-image.jpg') no-repeat center center/cover;
-    height: 400px;
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(to bottom right, #111, #333);
 }
 
-.hero h2 {
+#home h1 {
     font-size: 3rem;
-    color: #00ff00;
+    color: #00ff99;
+    animation: fadeIn 2s ease-in-out;
 }
 
-.hero p {
-    margin: 15px 0;
+#home p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #ccc;
 }
 
-/* About Section */
-#about {
-    padding: 50px 20px;
-    background-color: #1e1e1e;
+/* المنشورات */
+#blog {
+    margin: 50px 0;
+}
+
+#blog h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #00ff99;
+}
+
+.posts article {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    animation: fadeUp 1s ease-in-out;
+}
+
+.posts article h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.posts article p {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.posts article small {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+/* قسم التواصل */
+#contact {
+    margin: 50px 0;
     text-align: center;
 }
 
-#about h2 {
-    color: #00ff00;
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00ff99;
 }
 
-#about p, #about ul {
-    color: #f1f1f1;
-}
-
-/* Projects Section */
-#projects {
-    padding: 50px 20px;
-    background-color: #1a1a1a;
-}
-
-.project-list {
+#contact form {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.project {
-    background-color: #222;
-    padding: 20px;
-    margin: 10px;
-    border: 2px solid #00ff00;
-    width: 80%;
-    transition: transform 0.3s;
-}
-
-.project:hover {
-    transform: scale(1.05);
-}
-
-/* Certifications Section */
-#certifications {
-    padding: 50px 20px;
-    background-color: #1e1e1e;
-    text-align: center;
-}
-
-#certifications h2 {
-    color: #00ff00;
-}
-
-#certifications ul {
-    color: #f1f1f1;
-    list-style: none;
-}
-
-/* Social Media Section */
-#social-media {
-    padding: 50px 20px;
-    background-color: #1a1a1a;
-    text-align: center;
-}
-
-#social-media h2 {
-    color: #00ff00;
-}
-
-.social-links a {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 15px;
-    background: #00ff00;
-    color: #121212;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.social-links a:hover {
-    background: #00cc00;
-}
-
-/* Contact Section */
-#contact {
-    padding: 50px 20px;
-    background-color: #1e1e1e;
-    text-align: center;
 }
 
 #contact form input,
 #contact form textarea {
+    width: 80%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0;
+    background: #333;
     border: none;
-    background: #222;
+    border-radius: 5px;
     color: #fff;
-    width: 100%;
 }
 
-#contact button {
-    padding: 10px;
-    background-color: #00ff00;
+#contact form button {
+    padding: 10px 20px;
+    background: #00ff99;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background 0.3s ease;
 }
 
-#contact button:hover {
-    background-color: #00cc00;
+#contact form button:hover {
+    background: #00cc77;
 }
 
-/* Footer */
-footer {
-    background-color: #1a1a1a;
-    text-align: center;
-    padding: 20px 0;
+/* التأثيرات */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-/* AOS Animation Styles */
-[data-aos] {
-    opacity: 0; /* Start hidden */
-    transition-property: opacity, transform;
-    transition-duration: 0.6s;
-}
-
-[data-aos].aos-animate {
-    opacity: 1; /* Fade in */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
