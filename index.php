@@ -40,7 +40,7 @@ include 'db_connection.php';
     <!-- قسم التواصل -->
     <section id="contact" data-aos="fade-up">
         <h2>Contact Me</h2>
-        <form action="submit_form.php" method="POST">
+        <form action="submit_form.php" method="POST"> <!-- ربط بالنموذج لمعالجة البيانات -->
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
