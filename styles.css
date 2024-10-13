@@ -1,219 +1,132 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Styling */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #0d1117;
-    color: #c9d1d9;
-    line-height: 1.6;
-    padding: 20px;
     margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1E1E1E;
+    color: #EAEAEA;
+    line-height: 1.6;
+    transition: all 0.3s ease-in-out;
 }
 
-/* الصفحة الرئيسية */
-#home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    background-color: #161b22;
-    color: #58a6ff;
-    padding: 40px;
+/* Navbar */
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
 }
 
-#home h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    animation: fadeInDown 1.5s ease;
-}
-
-#home p {
-    font-size: 1.8rem;
-    margin-top: 20px;
-    color: #8b949e;
-    animation: fadeInUp 1.5s ease;
-}
-
-a {
-    color: #58a6ff;
+nav ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-a:hover {
-    color: #1f6feb;
+nav ul li a:hover {
+    color: #F39C12;
+    transform: scale(1.1);
+}
+
+/* Section Headings */
+h2 {
+    font-size: 2rem;
+    color: #F39C12;
+    margin-bottom: 30px;
 }
 
 /* About Section */
 #about {
-    padding: 50px 0;
-    text-align: left;
-    margin: 0 auto;
-    max-width: 900px;
-}
-
-#about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+    padding: 100px 0;
     text-align: center;
 }
 
 #about p {
     font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #c9d1d9;
 }
 
-ul {
-    list-style: none;
-    padding-left: 20px;
-}
-
-ul li {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: #8b949e;
-}
-
-/* قسم المشاريع */
+/* Projects Section */
 #projects {
-    padding: 50px 0;
-    background-color: #161b22;
+    padding: 100px 0;
     text-align: center;
-}
-
-#projects h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
 }
 
 .project-item {
-    margin: 20px 0;
+    margin-bottom: 50px;
 }
 
 .project-item h3 {
-    font-size: 1.8rem;
-    color: #58a6ff;
+    font-size: 1.5rem;
+    color: #F39C12;
 }
 
-.project-item p {
-    color: #8b949e;
-}
-
-/* قسم الشهادات */
+/* Certifications */
 #certifications {
-    padding: 50px 0;
+    padding: 100px 0;
     text-align: center;
 }
 
-#certifications h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+.certification-item {
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+    color: #EAEAEA;
 }
 
-#certifications ul li {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: #8b949e;
-}
-
-/* قسم التواصل */
-#contact {
-    padding: 50px 0;
-    text-align: center;
-}
-
-#contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #58a6ff;
-}
-
-#contact form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#contact form input,
-#contact form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #0d1117;
-    border: 2px solid #30363d;
-    border-radius: 5px;
-    color: #c9d1d9;
-}
-
-#contact form button {
-    padding: 10px 30px;
-    background-color: #238636;
+/* Buttons and Links */
+button, a {
+    background-color: #F39C12;
     border: none;
-    border-radius: 5px;
-    color: white;
+    padding: 10px 20px;
+    color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-#contact form button:hover {
-    background-color: #2ea043;
+button:hover, a:hover {
+    background-color: #D35400;
 }
 
-/* التأثيرات الحركية */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* التأثير عند التمرير */
-[data-aos] {
+/* Smooth Animations */
+#about, #projects, #certifications, #contact {
     opacity: 0;
-    transition-property: transform, opacity;
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-[data-aos].aos-animate {
+#about.visible, #projects.visible, #certifications.visible, #contact.visible {
     opacity: 1;
-    transform: none;
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    background-color: #121212;
+    padding: 20px 0;
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+}
+
+footer a {
+    color: #F39C12;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #D35400;
+}
+
+/* AOS Animation Integration */
+[data-aos] {
+    transition-property: opacity, transform;
 }
 
 [data-aos="fade-up"] {
-    transform: translateY(30px);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
 }
