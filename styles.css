@@ -7,10 +7,11 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    color: #fff;
+    background-color: #0d1117;
+    color: #c9d1d9;
     line-height: 1.6;
-    padding: 0 20px;
+    padding: 20px;
+    margin: 0;
 }
 
 /* الصفحة الرئيسية */
@@ -21,69 +22,121 @@ body {
     align-items: center;
     height: 100vh;
     text-align: center;
-    background: linear-gradient(to bottom right, #111, #333);
+    background-color: #161b22;
+    color: #58a6ff;
+    padding: 40px;
 }
 
 #home h1 {
-    font-size: 3rem;
-    color: #00ff99;
-    animation: fadeIn 2s ease-in-out;
+    font-size: 3.5rem;
+    font-weight: bold;
+    animation: fadeInDown 1.5s ease;
 }
 
 #home p {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-top: 20px;
-    color: #ccc;
+    color: #8b949e;
+    animation: fadeInUp 1.5s ease;
 }
 
-/* المنشورات */
-#blog {
-    margin: 50px 0;
+a {
+    color: #58a6ff;
+    text-decoration: none;
 }
 
-#blog h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+a:hover {
+    color: #1f6feb;
+}
+
+/* About Section */
+#about {
+    padding: 50px 0;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
     text-align: center;
-    color: #00ff99;
 }
 
-.posts article {
-    background: #222;
-    padding: 20px;
-    border-radius: 10px;
+#about p {
+    font-size: 1.2rem;
     margin-bottom: 20px;
-    animation: fadeUp 1s ease-in-out;
+    color: #c9d1d9;
 }
 
-.posts article h3 {
-    font-size: 1.5rem;
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+ul li {
+    font-size: 1.1rem;
     margin-bottom: 10px;
+    color: #8b949e;
 }
 
-.posts article p {
-    color: #ccc;
+/* قسم المشاريع */
+#projects {
+    padding: 50px 0;
+    background-color: #161b22;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.project-item {
+    margin: 20px 0;
+}
+
+.project-item h3 {
+    font-size: 1.8rem;
+    color: #58a6ff;
+}
+
+.project-item p {
+    color: #8b949e;
+}
+
+/* قسم الشهادات */
+#certifications {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#certifications h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+#certifications ul li {
+    font-size: 1.1rem;
     margin-bottom: 10px;
-}
-
-.posts article small {
-    font-size: 0.9rem;
-    color: #999;
+    color: #8b949e;
 }
 
 /* قسم التواصل */
 #contact {
-    margin: 50px 0;
+    padding: 50px 0;
     text-align: center;
 }
 
 #contact h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #00ff99;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #58a6ff;
 }
 
 #contact form {
+    max-width: 600px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,39 +144,42 @@ body {
 
 #contact form input,
 #contact form textarea {
-    width: 80%;
+    width: 100%;
     padding: 10px;
     margin: 10px 0;
-    background: #333;
-    border: none;
+    background-color: #0d1117;
+    border: 2px solid #30363d;
     border-radius: 5px;
-    color: #fff;
+    color: #c9d1d9;
 }
 
 #contact form button {
-    padding: 10px 20px;
-    background: #00ff99;
+    padding: 10px 30px;
+    background-color: #238636;
     border: none;
     border-radius: 5px;
+    color: white;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 #contact form button:hover {
-    background: #00cc77;
+    background-color: #2ea043;
 }
 
-/* التأثيرات */
-@keyframes fadeIn {
+/* التأثيرات الحركية */
+@keyframes fadeInDown {
     from {
         opacity: 0;
+        transform: translateY(-20px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@keyframes fadeUp {
+@keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -132,4 +188,32 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* التأثير عند التمرير */
+[data-aos] {
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+    transform: none;
+}
+
+[data-aos="fade-up"] {
+    transform: translateY(30px);
 }
