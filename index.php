@@ -8,8 +8,8 @@ include 'db_connection.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omar Hany Shalaby | Cybersecurity Specialist</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="style.css"> <!-- ربط بملف الـ CSS -->
+    <script src="js/main.js" defer></script> <!-- ربط بملف JS للتأثيرات -->
 </head>
 <body>
     <!-- صفحة البداية والقسم التعريفي -->
@@ -40,7 +40,7 @@ include 'db_connection.php';
     <!-- قسم التواصل -->
     <section id="contact" data-aos="fade-up">
         <h2>Contact Me</h2>
-        <form action="submit_form.php" method="POST"> <!-- ربط بالنموذج لمعالجة البيانات -->
+        <form action="submit_form.php" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
