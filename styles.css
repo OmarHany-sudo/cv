@@ -9,6 +9,7 @@
 body {
     background-color: #121212;
     color: #f1f1f1;
+    scroll-behavior: smooth;
 }
 
 /* Header Styles */
@@ -48,11 +49,12 @@ nav ul li {
 nav ul li a {
     color: #00ff99;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
 nav ul li a:hover {
     color: #00cc00;
+    text-shadow: 0 0 5px #00ff00;
 }
 
 .hero {
@@ -184,4 +186,42 @@ nav ul li a:hover {
     background-color: #00cc00;
 }
 
-/
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero {
+        height: auto;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    #contact form input,
+    #contact form textarea {
+        width: 90%;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #f1f1f1;
+    }
+}
